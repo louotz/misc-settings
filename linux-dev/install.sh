@@ -1,6 +1,7 @@
 #!/bin/bash
 
 BKDIR=~/.misc-settings-bk
+VIMCOLORS=~/.vim/colors
 
 mkdir -p $BKDIR
 
@@ -18,5 +19,8 @@ apply util_functions
 apply bash_aliases
 apply bashrc
 apply vimrc
+
+mkdir -p $VIMCOLORS
+cp vim/ldark.vim $VIMCOLORS
 
 source ~/.bashrc
