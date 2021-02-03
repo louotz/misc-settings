@@ -1,0 +1,26 @@
+XO='--color=auto'
+
+alias ls="ls $XO"
+alias l="ls -l $XO"
+alias ll="ls -l $XO"
+alias la="ls -A $XO"
+
+alias grep="/bin/grep $XO"
+alias egrep="/bin/egrep $XO"
+alias fgrep="/bin/fgrep $XO"
+
+alias sgrep="/bin/grep -REIn $XO $SGREP_EXCLUDED"
+alias stree="/usr/bin/tree -I *.o"
+
+XO=
+
+alias svns="svn stat"
+alias svnu="svn update"
+alias svnc="svn commit"
+alias svnl="svn log"
+alias svndi="svn diff"
+alias svndit="svn diff --diff-cmd=diff"
+
+alias wnsvn="svn stat -u | grep -v ^?"
+
+alias ps="ps --sort=start_time"

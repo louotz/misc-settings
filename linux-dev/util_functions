@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cdiff()
+{
+	if [ -n "$1" ]; then
+		if [ -f $1.working ]; then
+			vim -d $1.working $1.merge-right
+		else
+			vim -d $1.mine $(ls $1.r* | tail -n 1)
+		fi
+
+		return 0
+	fi
+
+	return 1
+}
+
